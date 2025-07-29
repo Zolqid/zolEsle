@@ -1,0 +1,11 @@
+name: zolEsle
+version: '${project.version}'
+main: com.zolqid.zolesle.MinecraftPlugin
+api-version: '1.16'
+commands:
+  hesapesle:
+    description: Minecraft hesabınız ile Discord hesabınızı bağlar!
+    usage: /hesapesle
+  hesapkaldir:
+    description: Eşli hesabınızı kaldırır.
+    usage: /hesapkaldir

@@ -1,0 +1,17 @@
+prefix: ""
+mysql:
+  host: 
+  port: 
+  database: 
+  username: 
+  password: 
+discord:
+  token: ""
+  prefix: ""
+  messages_log: ""
+  trade_channel: ""
+
+odul:
+  komutlar:
+    - give %player% diamond 3
+    - say %player% ödülünü aldı!
