@@ -19,7 +19,7 @@ This plugin includes useful features like **boost reward system** and a **trade 
 
 ## Installation
 
-1. Download the latest `.jar` file from the [Releases](https://github.com/Zolqid/zolEsle/releases).  
+1. Download the latest `.jar` file.
 2. Place the `.jar` file into your Minecraft server's `plugins` directory.  
 3. Run the server once to generate the default `config.yml` file inside the plugin folder.  
 4. Open `config.yml` and configure the plugin settings as needed (Discord bot token, reward settings, trade channel IDs, etc.).  
