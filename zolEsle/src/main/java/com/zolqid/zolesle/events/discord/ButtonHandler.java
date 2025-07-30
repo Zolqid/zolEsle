@@ -2,6 +2,7 @@ package com.zolqid.zolesle.events.discord;
 
 import com.zolqid.zolesle.MinecraftPlugin;
 import com.zolqid.zolesle.util.KodVeritabani;
+import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.interaction.component.ButtonInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.modals.Modal;
@@ -45,6 +46,11 @@ public class ButtonHandler extends ListenerAdapter {
         if (event.getComponentId().equals("odul_al")) {
 
             String discordId = event.getUser().getId();
+            Member member = event.getGuild().getMemberById(discordId);
+            if (member == null || member.getTimeBoosted() == null) {
+                event.reply("🚫 Bu ödülü almak için sunucumuza boost basmış olman gerekiyor.").setEphemeral(true).queue();
+                return;
+            }
             if (!KodVeritabani.eslenmisMi(discordId)) {
                 event.reply("❌ Bu ödülü almak için Minecraft hesabınla eşleşmelisin.").setEphemeral(true).queue();
                 return;
